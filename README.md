@@ -14,7 +14,7 @@
 - ⑥Geminiから受けとったプロンプト結果をPHPへ渡し、外部マテリアルへ出力 ⭐️新規追加
 
 ## ③アプリのデプロイURL
-
+https://masa-programming.sakura.ne.jp/marketing-prompt-maker-API-PHP/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 - なし（初回利用時にはユーザー登録が必要）
