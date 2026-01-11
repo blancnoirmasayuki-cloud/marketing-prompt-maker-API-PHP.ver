@@ -1,12 +1,6 @@
 // Firebaseの初期化設定
 const firebaseConfig = {
-  apiKey: "XX",
-  authDomain: "XX",
-  databaseURL: "XX",
-  projectId: "XX",
-  storageBucket: "XX",
-  messagingSenderId: "XX",
-  appId: "XX"
+  XX
 };
 
 // Firebaseを初期化
@@ -169,6 +163,12 @@ $("#makeprompt").on("click", async function () {
       console.error("Firestore保存エラー: ", error);
     });
 
+  //Geminiの回答をSQLに保存
+    $("#hidden-ai-data").val(aiResponse); 
+    $("#hidden-title").val(name);
+    $("#hidden-uniqueid").val(auth.currentUser.uid);
+
+  // ---  HTMLへの表示 ---
   const html = `
     <li class="response-item">
       <h3>🤖 AIマーケターからの提案</h3>
@@ -182,13 +182,7 @@ $("#makeprompt").on("click", async function () {
   `;
   $("#list").append(html);
 
-  // 1. 画面に表示したのと同じ回答（aiResponse）を、保存用の隠しバケツにコピー
-  const hiddenInput = document.getElementById('hidden-ai-data');
-  if (hiddenInput) {
-      hiddenInput.value = aiResponse; // ここがHTMLとJSを繋ぐ「荷造り」です
-  }
-
-  // 2. 非表示にしていた保存ボタン付きのフォームをふわっと表示させる
+  // 非表示にしていた保存ボタン付きのフォームを表示
   $("#save-form").fadeIn();
 });
 
