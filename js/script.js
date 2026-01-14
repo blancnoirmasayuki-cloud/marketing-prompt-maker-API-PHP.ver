@@ -1,6 +1,6 @@
 // Firebaseの初期化設定
 const firebaseConfig = {
-  XX
+
 };
 
 // Firebaseを初期化
@@ -81,6 +81,7 @@ $("#makeprompt").on("click", async function () {
   const promptInstruction = `
     あなたは、BtoBマーケティングに精通したマーケターです。
     下記の情報を厳守しつつ、マーケティングの戦略を統一感を維持しつつ提案してください。
+    文章が長くならないように最小限の文章にしてください。
 
     #サービスについて
     --サービス名：${name}
@@ -108,7 +109,7 @@ $("#makeprompt").on("click", async function () {
   let aiResponse = ""; 
 
   try {
-    const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=XXX";
+    const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=";
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

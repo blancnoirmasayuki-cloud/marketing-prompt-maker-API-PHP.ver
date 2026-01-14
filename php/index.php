@@ -58,7 +58,7 @@
           <button id="clearall">全てリセット</button>
         </div>
 
-        <form action="php/write.php" method="post" id="save-form" style="display:none; text-align: center; margin-top: 20px;">
+        <form action="write.php" method="post" id="save-form" style="display:none; text-align: center; margin-top: 20px;">
             <input type="hidden" name="ai_response" id="hidden-ai-data">
             <input type="hidden" name="title" id="hidden-title">
             <input type="hidden" name="uniqueid" id="hidden-uniqueid">
