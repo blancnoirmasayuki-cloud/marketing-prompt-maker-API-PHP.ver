@@ -56,6 +56,7 @@
           <button id="clearprompt">プロンプトをリセット</button>
           <button id="copyprompt">プロンプトをコピー</button>
           <button id="clearall">全てリセット</button>
+          <button id="view-history">自分の履歴を見る</button>
         </div>
 
         <form action="write.php" method="post" id="save-form" style="display:none; text-align: center; margin-top: 20px;">

@@ -1,6 +1,6 @@
 // Firebaseの初期化設定
 const firebaseConfig = {
-
+  
 };
 
 // Firebaseを初期化
@@ -204,4 +204,14 @@ $("#copyprompt").on("click", function() {
 $("#clearall").on("click", function () {
   $("#list").empty();
   $("input, textarea").val('');
+});
+
+// 自分の履歴を見る
+$("#view-history").on("click", function() {
+    const user = firebase.auth().currentUser;
+    if (user) {
+        window.location.href = "select.php?uid=" + user.uid;
+    } else {
+        alert("ログインが必要です");
+    }
 });
